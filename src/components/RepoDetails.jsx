@@ -34,11 +34,11 @@ const RepoDetails = () => {
 
       <p>List of contributors</p>
       {contributors.length > 0 &&
-        contributors.map((contributor) => (
-          <div aria-label='contributor-details'>
+        contributors.map((contributor, index) => (
+          <div aria-label='contributor-details' key={index}>
             <img src={contributor.avatar_url} alt='avatar url' />
             <p aria-label='contributor'>{contributor.login}</p>
-            <a href={contributor.url} target='_blank' rel='noreferrer'>
+            <a href={contributor.html_url} target='_blank' rel='noreferrer'>
               View user
             </a>
           </div>
@@ -47,10 +47,10 @@ const RepoDetails = () => {
       <p>List of commits</p>
       {commits.length > 0 &&
         commits.map((commit) => (
-          <div aria-label='commit-details'>
+          <div aria-label='commit-details' key={commit.node_id}>
             <p aria-label='commit author'>{commit.commit.author.name}</p>
             <p aria-label='commit mesage'>{commit.commit.message}</p>
-            <a href={commit.commit.url} target='_blank' rel='noreferrer'>
+            <a href={commit.html_url} target='_blank' rel='noreferrer'>
               View commit
             </a>
           </div>
