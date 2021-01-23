@@ -1,0 +1,106 @@
+@mixin disp($val) {
+	display: $val;
+}
+@mixin flex($val1, $val2){
+	flex: ($val1);
+    max-width: ($val2);
+}
+@mixin wid($val) {
+	width: $val;
+}
+@mixin min_max_wid($val1, $val2) {
+	min-width: $val1;  
+	max-width: $val2;
+}
+@mixin min_max_height($val1, $val2) {
+	min-height: $val1;  
+	max-height: $val2;
+}
+@mixin max_wid($val){
+	max-width: ($val);
+}
+@mixin shadow($val) {
+	box-shadow: $val;
+}
+@mixin bg_color($val){
+	background-color: $val;
+}
+@mixin opacity($val){
+	opacity: $val;
+}
+@mixin bg_none($val) {
+	background: $val;
+}
+@mixin mar($marginX,$marginY){
+	margin: $marginX $marginY;
+}
+@mixin pad($padX, $padY){
+	padding: $padX $padY;
+}
+@mixin elementArea($area){
+	position: ($area);
+}
+@mixin padding($pad){
+	padding: ($pad);
+}
+@mixin margin($val){
+	margin: ($val);
+}
+@mixin color($clr){
+	color: ($clr);
+}
+@mixin border_crl($val){
+	border-color: ($val);
+}
+@mixin height($val){
+	height: ($val);
+}
+@mixin decoration($val){
+	text-decoration: ($val);
+}
+@mixin weight($val){
+	font-weight: ($val);
+}
+@mixin font($val){
+	font-size: ($val);
+}
+@mixin zindex($val){
+	z-index: ($val);
+}
+@mixin trans($val){
+	transition: ($val);
+}
+@mixin float($val){
+	float: ($val);
+}
+@mixin roundCorners($val){
+	border-radius: ($val);
+}
+@mixin border($val){
+	border: ($val);;
+}
+@mixin bg($val){
+	background: ($val);
+}
+@mixin textAlign($val){
+	text-align: ($val);
+}
+@mixin minHigh($val){
+	min-height: ($val);
+}
+@mixin family($val){
+	font-family: ($val);
+}
+@mixin lineHeight($val){
+	line-height: ($val);
+}
+@mixin stroke($val){
+	stroke: ($val);
+}
+@mixin maxHeight($val){
+	max-height: ($val);
+}
+@mixin marginX($valLeft, $valRight){
+	margin-left: ($valLeft);
+	margin-right: ($valRight);
+}

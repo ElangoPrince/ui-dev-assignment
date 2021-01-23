@@ -26,35 +26,68 @@ const RepoDetails = () => {
   }, [location])
 
   return (
-    <div>
-      <div aria-label='header'>
-        <p aria-label='repo name'>{repo && repo.name}</p>
-        <p aria-label='repo description'>{repo && repo.description}</p>
+    <div className="container">
+      <div className="repHead">
+        <h1>Repository Details</h1>
       </div>
-
-      <p>List of contributors</p>
-      {contributors.length > 0 &&
-        contributors.map((contributor, index) => (
-          <div aria-label='contributor-details' key={index}>
-            <img src={contributor.avatar_url} alt='avatar url' />
-            <p aria-label='contributor'>{contributor.login}</p>
-            <a href={contributor.html_url} target='_blank' rel='noreferrer'>
-              View user
-            </a>
+      <div className="card">
+        <div className="cardBody">
+          <div className="cardTitle">
+            <h5 aria-label='repo name'>{repo && repo.name}</h5>
           </div>
-        ))}
-
-      <p>List of commits</p>
-      {commits.length > 0 &&
-        commits.map((commit) => (
-          <div aria-label='commit-details' key={commit.node_id}>
-            <p aria-label='commit author'>{commit.commit.author.name}</p>
-            <p aria-label='commit mesage'>{commit.commit.message}</p>
-            <a href={commit.html_url} target='_blank' rel='noreferrer'>
-              View commit
-            </a>
+          <div className="cardBody">
+            <p aria-label='repo description'>{repo && repo.description}</p>
           </div>
-        ))}
+        </div>
+      </div> 
+      <div className="bodyWrapper">
+        <div className="repHead">
+          <h2>List of contributors</h2>
+        </div>
+        <div className="flex crow">
+          {contributors && contributors.length > 0 && contributors.map((contributor, index)=>( 
+            <div className="ccol" key={index}>
+              <div className="card noneBorder" aria-label='contributor-details'>
+                <div className="cardBody">
+                  <div className="userLogo">
+                    <img src={contributor.avatar_url} />
+                  </div>
+                  <div className="descriptionContainer">
+                    <p aria-label='contributor' className="m-0">{contributor.login}</p>
+                    <a href={contributor.html_url} target='_blank' rel='noreferrer' className="navigationLink">
+                      <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            )
+          )}
+        </div>
+        { contributors.length == 0 && (<div className="relativeView"><i className="fa fa-spinner fa-spin loadingSpinner"></i></div> )}
+      </div>
+      <div className="bodyWrapper">
+        <div className="repHead">
+          <h2>List of commits</h2>
+        </div>
+        {commits && commits.length > 0 && commits.map((commit, index)=>( 
+          <div className="card" key={index}>
+            <div className="cardBody">
+              <div className="cardTitle">
+                <h5 aria-label='repo name'>{commit.commit.author.name}</h5>
+              </div>
+              <div className="cardBody">
+                <p aria-label='repo description'>{commit.commit.message}</p>
+              </div>
+              <div className="cardFooter">
+                <a className="anchorButton" href={commit.html_url} target='_blank' rel='noreferrer'>View commit</a>                
+              </div>
+            </div>
+          </div> 
+          )
+        )}
+        { commits.length == 0 && (<div className="relativeView"><i className="fa fa-spinner fa-spin loadingSpinner"></i></div> )}
+      </div>
     </div>
   )
 }

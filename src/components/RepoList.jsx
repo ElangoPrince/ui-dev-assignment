@@ -2,23 +2,31 @@ import React, { Fragment } from 'react'
 import { useHistory } from 'react-router-dom'
 
 const RepoList = ({ repoList }) => {
+  console.log('repoList', repoList);
   const history = useHistory()
   return (
     <Fragment>
-      {repoList.length > 0 && <h2 aria-label='label - public repos list'>Public Repos list</h2>}
+      {repoList && repoList.length > 0 &&  <div className="repHead">
+        <h1>Public Repos list</h1>
+      </div> }
 
       {(repoList || []).map((repo) => (
-        <div key={repo.id}>
-          <p aria-label='repo name'>{repo.name}</p>
-          <p aria-label='repo description'>{repo.description}</p>
-          <button
-            onClick={() => {
-              history.push('/repo?' + new URLSearchParams({ fullname: repo.full_name }))
-            }}
-          >
-            View Repo
-          </button>
-        </div>
+        <div className="card" key={repo.id}>
+          <div className="cardBody">
+            <div className="cardTitle">
+              <h5 aria-label='repo name'>{repo.name}</h5>
+            </div>
+            <div className="cardBody">
+              <p aria-label='repo description'>{repo.description}</p>
+            </div>
+            <div className="cardFooter">
+              <button className="pointer" onClick={() => {
+                history.push('/repo?' + new URLSearchParams({ fullname: repo.full_name })) }}>View Repo &nbsp;
+                <i className="fa fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div> 
       ))}
     </Fragment>
   )
