@@ -7,6 +7,11 @@ import Image3 from '../assets/image3.jpg'
 import Image4 from '../assets/image4.jpg'
 import Image6 from '../assets/image6.jpg'
 import Image5 from '../assets/image5.png'
+// const items =[
+//   {
+    
+//   }
+// ]
 const config = {
   delegate: 'a',
   type: 'image',
@@ -33,29 +38,90 @@ const config = {
 
 const ImageGallery = () => {
   return (
-    
-
-    <LightBoxGallery 
-      className="popup-gallery"
-      config={config}
-    >
-      <GalleryItem
-        href="http://farm4.staticflickr.com/3763/9204547649_0472680945_o.jpg" 
-        data-source="http://500px.com/photo/32736307" 
-        title="Into The Blue" 
-        style={{width: '193px', height:'125px'}}
-      >
-        <img src="http://farm4.staticflickr.com/3763/9204547649_7de96ee188_t.jpg" width="193" height="125" />
-      </GalleryItem>
-      <GalleryItem
-        href="http://farm3.staticflickr.com/2856/9207329420_7f2a668b06_o.jpg" 
-        data-source="http://500px.com/photo/32554131" 
-        title="Light Sabre" 
-        style={{width: '82px', height: '125px'}}
-      >
-        <img src="http://farm3.staticflickr.com/2856/9207329420_e485948b01_t.jpg" width="82px" height="125" />
-      </GalleryItem>
-    </LightBoxGallery> 
+    <div className="container">
+      <div className="bodyWrapper">
+        <div className="repHead">
+          <h2>Image Gallery</h2>
+        </div>
+        <LightBoxGallery 
+          className="popup-gallery"
+          config={config}
+        >
+          <div className="myRow">
+              <div className="my-2 col4">
+                <GalleryItem
+                  href={Image1} 
+                  data-source={Image1} 
+                  className="col4"
+                  title="Into The Blue"   
+                >
+                  <img src={Image1} className="maxWidth"/>
+                </GalleryItem>
+              </div>
+              <div className="my-2 col4">
+                <GalleryItem
+                  href={Image1} 
+                  data-source={Image1} 
+                  className="col4"
+                  title="Into The Blue"   
+                >
+                  <img src={Image1} className="maxWidth"/>
+                </GalleryItem>
+              </div>
+              <div className="my-2 col4">
+                <GalleryItem
+                  href={Image1} 
+                  data-source={Image1} 
+                  className="col4"
+                  title="Into The Blue"   
+                >
+                  <img src={Image1} className="maxWidth"/>
+                </GalleryItem>
+              </div>
+              <div className="my-2 col4">
+                <GalleryItem
+                  href={Image1} 
+                  data-source={Image1} 
+                  className="col4"
+                  title="Into The Blue"   
+                >
+                  <img src={Image1} className="maxWidth"/>
+                </GalleryItem>
+              </div>
+              <div className="my-2 col4">
+                <GalleryItem
+                  href={Image1} 
+                  data-source={Image1} 
+                  className="col4"
+                  title="Into The Blue"   
+                >
+                  <img src={Image1} className="maxWidth"/>
+                </GalleryItem>
+              </div>
+              <div className="my-2 col4">
+                <GalleryItem
+                  href={Image1} 
+                  data-source={Image1} 
+                  className="col4"
+                  title="Into The Blue"   
+                >
+                  <img src={Image1} className="maxWidth"/>
+                </GalleryItem>
+              </div>
+              <div className="my-2 col4">
+                <GalleryItem
+                  href={Image1} 
+                  data-source={Image1} 
+                  className="col4"
+                  title="Into The Blue"   
+                >
+                  <img src={Image1} className="maxWidth"/>
+                </GalleryItem>
+              </div>
+          </div>
+        </LightBoxGallery> 
+      </div>
+  </div> 
   );
 }
 

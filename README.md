@@ -57,3 +57,11 @@ The repo details section will open when the user clicks on view repo button in h
 - The repo details page should have a sticky header with repo details.
 - The repo details page should show contributors list.
 - The repo details page should show the commit list (if necessary a virtualised list).
+
+### Issue
+	- If Project can't be run, Please commend 'react-magnific-popup' image gallery page. [Temp Resolve]
+	- Also refer Screens Design folder for pages designs. 
+	"react-magnific-popup": "^1.0.1", Having issue with package. We need to update the following files to avoid build error.
+	nodemodules/react-magnific-popup/lib
+		LightboxGallery.js, ReactMagnificPopup.js, SingleImage.js change _default[..].PropTypes into PropTypes.
+		Also intall PropTypes.

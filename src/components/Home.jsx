@@ -45,7 +45,7 @@ const Home = () => {
                     <a className="logo pointer" href="#!">
                            {/* <img src={Logo} alt='logo' className=""/> */}
                             <i className="fa fa-soundcloud _logo" aria-hidden="true"></i>
-                        <span> Console Cloud </span>
+                        <span> Console </span>
                     </a>
                     <div className="rightHeader">
                         <ul>
