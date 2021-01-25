@@ -65,3 +65,4 @@ The repo details section will open when the user clicks on view repo button in h
 	nodemodules/react-magnific-popup/lib
 		LightboxGallery.js, ReactMagnificPopup.js, SingleImage.js change _default[..].PropTypes into PropTypes.
 		Also intall, import PropTypes .
+	ex:   ReadMe Updated "_react2['default'].PropTypes into PropTypes", remove "_react2['default']" 
