@@ -64,4 +64,4 @@ The repo details section will open when the user clicks on view repo button in h
 	"react-magnific-popup": "^1.0.1", Having issue with package. We need to update the following files to avoid build error.
 	nodemodules/react-magnific-popup/lib
 		LightboxGallery.js, ReactMagnificPopup.js, SingleImage.js change _default[..].PropTypes into PropTypes.
-		Also intall PropTypes.
+		Also intall, import PropTypes .
